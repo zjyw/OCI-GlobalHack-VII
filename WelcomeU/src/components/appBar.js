@@ -36,6 +36,7 @@ function ButtonAppBar(props) {
           <Typography variant="h6" className={classes.grow}>
             WelcomeU
           </Typography>
+          <div id="google_translate_element"></div>
           <div>
           <FormControl className={classes.login}>
           <TextField
