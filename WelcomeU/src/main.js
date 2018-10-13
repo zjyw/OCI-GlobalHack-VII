@@ -7,7 +7,7 @@ import Routes from './routes/index';
 
 const theme = createMuiTheme({
   palette: {
-    primary: { main: '#1976d2' },
+    primary: { main: '#18bc9c' },
     info: { main: '#3498db' },
     success: { main: '#27ae60' }
   }

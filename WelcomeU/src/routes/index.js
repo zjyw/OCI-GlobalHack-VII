@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import RoutesWrapper from './routes';
 
 const routes = () => (
-  <BrowserRouter basename="/welcome">
+  <BrowserRouter basename="/">
     <RoutesWrapper />
   </BrowserRouter>
 );

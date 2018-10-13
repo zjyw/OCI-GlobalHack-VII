@@ -48,8 +48,8 @@ const Form = props => {
           />
         </div>
       </div>
-      <div style={{marginLeft: '25px'}}>
-        <Button variant="contained" color="primary" size="large" type="submit">
+      <div style={{marginLeft: '25px', color: 'white'}}>
+        <Button variant="contained" color="primary" size="large" type="submit" style={{color: 'white'}}>
           Join Now
         </Button>
       </div>

@@ -17,8 +17,8 @@ const Subtitle = ({message, Icon}) => (<div style={{margin: '35px 0', display: '
 
 const styles = () => ({
   root: {
-  padding: '6%',
-  margin: '3%',
+  padding: '5%',
+  margin: '2%',
   display: 'flex',
   justifyContent: 'space-between'
   }
