@@ -15,17 +15,18 @@ const styles = () => ({
     color: 'black',
   },
   box: {
-    display: 'flex'
+    display: 'flex',
   },
   buttonWrapper: {
     display: 'flex',
-    width: '80%',
+    flex: 1,
     margin: 'auto',
-    padding: '1%'
+    padding: '1%',
   },
   button: {
-    width: '80%',
-    margin: 'auto'
+    width: '90%',
+    margin: 'auto',
+    fontSize: '18px',
   },
 });
 
