@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import welcomeMessage from '../constants/languages';
+import {withRouter} from 'react-router-dom';
 
 const styles = () => ({
   root: {
@@ -30,9 +31,13 @@ const styles = () => ({
   },
 });
 
-const ButtonContainer = ({message, classes}) => (
+const ButtonContainer = ({message, classes, history}) => (
   <div className={classes.buttonWrapper}>
     <Button
+        onClick={() => {
+        history.push('/join');
+        }}
+        style={{color: 'white'}}
         variant="contained"
         color="primary"
         disableRipple
@@ -44,15 +49,15 @@ const ButtonContainer = ({message, classes}) => (
 )
 
 function FullWidthGrid(props) {
-  const { classes } = props;
+  const { classes, history } = props;
 
   return (
     <div className={classes.root}>
       <Paper className={classes.box}>
-      {welcomeMessage.map(m => (<ButtonContainer key={m.lang} message={m.message} classes={classes}/>))}
+      {welcomeMessage.map(m => (<ButtonContainer history={history} key={m.lang} message={m.message} classes={classes}/>))}
       </Paper>
     </div>
   );
 }
 
-export default withStyles(styles)(FullWidthGrid);
+export default withStyles(styles)(withRouter(FullWidthGrid));

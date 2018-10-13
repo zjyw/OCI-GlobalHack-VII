@@ -14,10 +14,8 @@ const styles = {
   },
   grow: {
     flexGrow: 1,
-  },
-  menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
+    color: 'white',
+    fontSize: '26px'
   },
   login: {
     display: 'flex',
@@ -33,28 +31,30 @@ function ButtonAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static">
+      <AppBar position="static" color="primary">
         <Toolbar>
-          <Typography variant="h6" color="inherit" className={classes.grow}>
+          <Typography variant="h6" className={classes.grow}>
             WelcomeU
           </Typography>
           <div>
           <FormControl className={classes.login}>
           <TextField
-            id="filled-name"
+            inputProps={{style: {color: 'white'}}}
+            InputLabelProps={{style: {color: 'white'}}}
             label="Name"
             className={classes.textField}
             margin="normal"
           />
           <TextField
-            id="filled-name"
+          inputProps={{style: {color: 'white'}}}
+          InputLabelProps={{style: {color: 'white'}}}
             label="Password"
             className={classes.textField}
             margin="normal"
           />
           </FormControl>
           </div>
-          <Button color="inherit">Login</Button>
+          <Button style={{color: 'white'}}>Login</Button>
         </Toolbar>
       </AppBar>
     </div>

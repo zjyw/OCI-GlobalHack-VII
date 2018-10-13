@@ -17,7 +17,7 @@ const renderTextField = (
 const Form = props => {
   const { handleSubmit } = props;
   return (
-    <form onSubmit={handleSubmit} style={{marginLeft: '25px'}}>
+    <form onSubmit={handleSubmit} style={{marginLeft: '25px', marginBottom: '25px'}}>
       <div>
         <div>
           <Field
@@ -48,8 +48,8 @@ const Form = props => {
           />
         </div>
       </div>
-      <div>
-        <Button variant="contained" color="primary" size="large" type="submit">
+      <div style={{marginLeft: '25px', color: 'white'}}>
+        <Button variant="contained" color="primary" size="large" type="submit" style={{color: 'white'}}>
           Join Now
         </Button>
       </div>

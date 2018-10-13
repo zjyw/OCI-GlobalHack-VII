@@ -17,11 +17,11 @@ const Subtitle = ({message, Icon}) => (<div style={{margin: '35px 0', display: '
 
 const styles = () => ({
   root: {
-  padding: '4%',
-  margin: '3%',
+  padding: '5%',
+  margin: '2%',
   display: 'flex',
   justifyContent: 'space-between'
-  },
+  }
 });
 
 class FormPage extends React.Component {
@@ -41,9 +41,9 @@ class FormPage extends React.Component {
           <Typography variant="display1" style={{textAlign: 'center'}}>Join WelcomeU</Typography>
           <Typography variant="headline" style={{textAlign: 'center'}}>It's free!</Typography>
           <Form onSubmit={this.onSubmit} />
-          <Typography variant="subheading">No, thanks.</Typography>
-          <Typography variant="subheading">I'm just browsing</Typography>
-          <Button variant="contained">Continue</Button>
+          <Typography variant="subheading" style={{textAlign: 'center'}}>No, thanks.</Typography>
+          <Typography variant="subheading" style={{textAlign: 'center'}}>I'm just browsing</Typography>
+          <Button variant="contained" style={{marginLeft: '60px', marginTop: '10px'}}>Continue</Button>
         </div>
       </Paper>
     </div>
