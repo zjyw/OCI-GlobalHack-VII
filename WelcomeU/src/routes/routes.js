@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Redirect, Route, Switch, withRouter } from 'react-router-dom';
-import Welcome from '../components/welcome';
+import { Route, Switch, withRouter } from 'react-router-dom';
+import WelcomePage from '../components/welcomePage';
+import FormPage from '../components/formPage';
 
 class RoutesWrapper extends Component {
   componentDidMount() {
@@ -13,8 +14,8 @@ class RoutesWrapper extends Component {
 
     return (
       <Switch>
-        <Route exact path="/" component={Welcome} />
-        <Redirect to="/products" />
+        <Route exact path="/" component={WelcomePage} />
+        <Route exact path="/join" component={FormPage} />
       </Switch>
     );
   }
