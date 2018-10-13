@@ -1,0 +1,2 @@
+define("ace/snippets/applescript",["require","exports","module"],function(e,p,t){"use strict";p.snippetText="",p.scope="applescript"});(function(){window.require(["ace/snippets/applescript"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/applescript.js.map

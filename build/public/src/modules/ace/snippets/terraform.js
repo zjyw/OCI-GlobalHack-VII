@@ -1,0 +1,2 @@
+define("ace/snippets/terraform",["require","exports","module"],function(e,o,t){"use strict";o.snippetText="",o.scope="terraform"});(function(){window.require(["ace/snippets/terraform"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/terraform.js.map

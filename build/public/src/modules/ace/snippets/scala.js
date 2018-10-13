@@ -1,0 +1,2 @@
+define("ace/snippets/scala",["require","exports","module"],function(e,o,t){"use strict";o.snippetText="",o.scope="scala"});(function(){window.require(["ace/snippets/scala"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/scala.js.map

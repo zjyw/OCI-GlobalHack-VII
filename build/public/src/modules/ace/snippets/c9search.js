@@ -1,0 +1,2 @@
+define("ace/snippets/c9search",["require","exports","module"],function(e,o,t){"use strict";o.snippetText="",o.scope="c9search"});(function(){window.require(["ace/snippets/c9search"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/c9search.js.map

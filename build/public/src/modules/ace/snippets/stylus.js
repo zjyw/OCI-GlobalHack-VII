@@ -1,0 +1,2 @@
+define("ace/snippets/stylus",["require","exports","module"],function(e,t,s){"use strict";t.snippetText="",t.scope="stylus"});(function(){window.require(["ace/snippets/stylus"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/stylus.js.map

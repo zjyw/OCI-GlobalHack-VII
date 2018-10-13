@@ -1,0 +1,2 @@
+define("ace/snippets/scss",["require","exports","module"],function(e,s,o){"use strict";s.snippetText="",s.scope="scss"});(function(){window.require(["ace/snippets/scss"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/scss.js.map

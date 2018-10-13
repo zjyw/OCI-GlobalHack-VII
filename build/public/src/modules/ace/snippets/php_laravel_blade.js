@@ -1,0 +1,2 @@
+define("ace/snippets/php_laravel_blade",["require","exports","module"],function(e,p,o){"use strict";p.snippetText="",p.scope="php"});(function(){window.require(["ace/snippets/php_laravel_blade"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/php_laravel_blade.js.map

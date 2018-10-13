@@ -1,0 +1,2 @@
+define("ace/snippets/turtle",["require","exports","module"],function(e,t,o){"use strict";t.snippetText=undefined,t.scope=""});(function(){window.require(["ace/snippets/turtle"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/turtle.js.map

@@ -1,0 +1,2 @@
+define("ace/snippets/tsx",["require","exports","module"],function(e,t,o){"use strict";t.snippetText="",t.scope="tsx"});(function(){window.require(["ace/snippets/tsx"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/tsx.js.map

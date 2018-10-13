@@ -1,0 +1,2 @@
+define("ace/snippets/slim",["require","exports","module"],function(e,o,t){"use strict";o.snippetText="",o.scope="slim"});(function(){window.require(["ace/snippets/slim"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/slim.js.map

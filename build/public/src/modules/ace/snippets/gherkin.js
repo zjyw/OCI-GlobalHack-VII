@@ -1,0 +1,2 @@
+define("ace/snippets/gherkin",["require","exports","module"],function(e,o,t){"use strict";o.snippetText="",o.scope="gherkin"});(function(){window.require(["ace/snippets/gherkin"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/gherkin.js.map

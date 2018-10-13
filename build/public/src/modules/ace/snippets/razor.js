@@ -1,0 +1,2 @@
+define("ace/snippets/razor",["require","exports","module"],function(e,o,t){"use strict";o.snippetText="snippet if\n(${1} == ${2}) {\n\t${3}\n}",o.scope="razor"});(function(){window.require(["ace/snippets/razor"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/razor.js.map

@@ -1,0 +1,2 @@
+define("ace/snippets/puppet",["require","exports","module"],function(e,p,t){"use strict";p.snippetText="",p.scope="puppet"});(function(){window.require(["ace/snippets/puppet"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/puppet.js.map

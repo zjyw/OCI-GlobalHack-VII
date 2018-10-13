@@ -1,0 +1,2 @@
+define("ace/snippets/rhtml",["require","exports","module"],function(e,t,o){"use strict";t.snippetText="",t.scope="rhtml"});(function(){window.require(["ace/snippets/rhtml"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/rhtml.js.map

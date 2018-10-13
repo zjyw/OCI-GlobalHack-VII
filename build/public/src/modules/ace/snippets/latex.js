@@ -1,0 +1,2 @@
+define("ace/snippets/latex",["require","exports","module"],function(e,t,o){"use strict";t.snippetText="",t.scope="latex"});(function(){window.require(["ace/snippets/latex"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/latex.js.map

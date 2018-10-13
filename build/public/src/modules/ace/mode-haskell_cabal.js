@@ -1,0 +1,1 @@
+../../../../../node_modules/ace-builds/src-min/mode-haskell_cabal.js

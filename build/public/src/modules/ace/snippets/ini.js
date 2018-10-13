@@ -1,0 +1,2 @@
+define("ace/snippets/ini",["require","exports","module"],function(e,i,o){"use strict";i.snippetText="",i.scope="ini"});(function(){window.require(["ace/snippets/ini"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/ini.js.map

@@ -1,0 +1,2 @@
+define("ace/snippets/d",["require","exports","module"],function(e,o,t){"use strict";o.snippetText="",o.scope="d"});(function(){window.require(["ace/snippets/d"],function(e){if(typeof module=="object"&&typeof exports=="object"&&module){module.exports=e}})})();
+//# sourceMappingURL=node_modules/ace-builds/src-min/snippets/d.js.map

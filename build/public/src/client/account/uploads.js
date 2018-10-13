@@ -1,0 +1,2 @@
+"use strict";define("forum/account/uploads",["forum/account/header"],function(a){var e={};e.init=function(){a.init();$('[data-action="delete"]').on("click",function(){var a=$(this).parents("[data-name]");var e=a.attr("data-name");socket.emit("user.deleteUpload",{name:e,uid:ajaxify.data.uid},function(e){if(e){return app.alertError(e.message)}a.remove()});return false})};return e});
+//# sourceMappingURL=public/src/client/account/uploads.js.map
