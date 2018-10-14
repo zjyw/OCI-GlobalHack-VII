@@ -35,7 +35,7 @@ class FormPage extends React.Component {
           </div>
         </div>
       </Paper>
-      <Chatbot />
+      {/* <Chatbot /> */}
     </div>
     )
   }
