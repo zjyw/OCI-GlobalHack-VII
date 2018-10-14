@@ -1,19 +1,16 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import Button from '@material-ui/core/Button';
-import ForumIcon from '@material-ui/icons/Forum'
-import WorkIcon from '@material-ui/icons/Work'
-import AssignmentIcon from '@material-ui/icons/Assignment'
-import Form from './form';
 import AppBar from '../components/appBar';
-import { Typography } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
+import Divider from '@material-ui/core/Divider'
 import Dialog from './dialog';
-
+import DetailForm from './detailsForm';
+import Chatbot from './chatBot';
 
 const styles = () => ({
   root: {
-  padding: '5%',
+  padding: '2%',
   margin: '2%',
   display: 'flex',
   justifyContent: 'space-between'
@@ -30,8 +27,15 @@ class FormPage extends React.Component {
       <Paper className={classes.root} elevation={1}>
         <div style={{marginRight: '100px'}}>
           <Dialog />
+          <Typography variant="h4">Tell Us About Yourself</Typography>
+          <Typography variant="h6">We will use this information to make recommendations. We do not share this information with anyone.</Typography>
+          <Divider style={{marginTop: '10px'}} />
+          <div style={{marginTop: '10px'}}>
+            <DetailForm />
+          </div>
         </div>
       </Paper>
+      <Chatbot />
     </div>
     )
   }
