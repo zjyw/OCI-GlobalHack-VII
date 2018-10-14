@@ -5,13 +5,13 @@ import Button from '@material-ui/core/Button';
 import TodayIcon from '@material-ui/icons/Today'
 import GroupIcon from '@material-ui/icons/Group'
 import LocationIcon from '@material-ui/icons/LocationOn'
-import Form from './form';
 import AppBar from '../components/appBar';
 import { Typography } from '@material-ui/core';
+import Chatbot from './chatBot';
 
 const Subtitle = ({message, Icon}) => (<div style={{margin: '35px 0', display: 'flex'}}>
-    <Icon style={{color: 'gray', fontSize: '50px'}} />
-    <Typography style={{marginTop: '-58px', marginLeft: '-86px'}} variant="headline">{message}</Typography>
+    <Icon style={{color: 'gray', fontSize: '50px', marginLeft: '37px'}} />
+    <Typography style={{marginTop: '-58px', marginLeft: '-104px'}} variant="headline">{message}</Typography>
 </div>)
 
 const styles = () => ({
@@ -41,6 +41,7 @@ const ButtonContainer = ({message, classes, url, history}) => (
             variant="contained"
             onClick={() => history.push(url)}
             color="primary"
+            style={{color: 'white', fontSize: '15px'}}
             disableRipple
             className={classes.button}
         >
@@ -57,28 +58,31 @@ class Recommendation extends React.Component {
             <div>
                 <AppBar />
                 <Paper className={classes.root} elevation={1}>
-                    <div style={{display: 'flex', flexDirection: 'column', margin: '20px'}}>
+                    <div style={{display: 'flex'}}>
+                    <div style={{display: 'flex', flexDirection: 'column', margin: '20px' }}>
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={GroupIcon} message={"My Household"} />
                         </div>
-                        <ButtonContainer message='Recommended Resources' classes={classes} url="/resources" history={history}/>
-                        <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>See a list of resources that others like you have found helpful.</Typography>
+                        <ButtonContainer message='Recommended Resources' classes={classes} history={history}url="/resources"/>
+                        <Typography variant="subtitle1" style={{textAlign: 'center', 'margin-right': '120px'}}>See a list of resources that others like you have found helpful.</Typography>
                     </div>
                     <div style={{display: 'flex', flexDirection: 'column', margin: '20px'}}>
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={LocationIcon} message={"My Locations"} />
                         </div>
-                        <ButtonContainer message='Community Involvement' classes={classes} url="/community" history={history}/>
-                        <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>Connect with people in your area who share your cultural origins.</Typography>
+                        <ButtonContainer message='Community Involvement' classes={classes} history={history} url="/community"/>
+                        <Typography variant="subtitle1" style={{textAlign: 'center', 'margin-right': '120px'}}>Connect with people in your area who share your cultural origins.</Typography>
                     </div>
                     <div style={{display: 'flex', flexDirection: 'column', margin: '20px'}}>
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={TodayIcon} message={"My Progress"} />
                         </div>
-                        <ButtonContainer message='Task List' classes={classes} url="/tasklist" history={history}/>
-                        <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>Track your progress, and more. WelcomeU is free, and always will be!</Typography>
+                        <ButtonContainer message='Task List' classes={classes} history={history} url="/tasklist"/>
+                        <Typography variant="subtitle1" style={{textAlign: 'center', 'margin-right': '120px'}}>Track your progress, and more. WelcomeU is free, and always will be!</Typography>
+                    </div>
                     </div>
                 </Paper>
+                <Chatbot />
             </div>
         )
     }

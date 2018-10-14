@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import CloseIcon from '@material-ui/icons/Close';
 import FA from 'react-fontawesome';
+import { Typography } from '@material-ui/core';
 
 const ChatButton = ({clickHandler}) => {
   return (
@@ -18,7 +19,8 @@ const ChatButton = ({clickHandler}) => {
       }}
       unmountOnExit
     >
-      <IconButton variant="fab" color="primary" onClick={clickHandler}>
+      <IconButton variant="fab" color="primary" onClick={clickHandler} style={{display: 'flex', flexDirection: 'column'}}>
+        <Typography variant="subheading" style={{fontSize: '20px'}}>How can I help you?</Typography>
         <FA name='comment' style={{fontSize: '90px', color:'orange', transform: 'rotate(25deg) scaleX(-1)'}}/>
       </IconButton>
     </Zoom>
