@@ -7,6 +7,7 @@ import { Redirect } from 'react-router-dom';
 import Recommendation from '../components/recommendation';
 import DetailsPage from '../components/detailsPage';
 import TaskList from '../components/taskList';
+import ResourceList from '../components/resources';
 
 class RoutesWrapper extends Component {
   componentDidMount() {
@@ -20,6 +21,8 @@ class RoutesWrapper extends Component {
         <Route path="/join" component={FormPage} />
         <Route path="/recommendation" component={Recommendation} />
         <Route path="/tasklist" component={TaskList} />
+        <Route path="/resources" component={ResourceList} />
+        <Route path="/community" component={TaskList} />
         <Route path="/details" component={DetailsPage} />
         <Redirect to="/" />
       </Switch>
