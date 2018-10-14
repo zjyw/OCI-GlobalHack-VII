@@ -35,11 +35,11 @@ const styles = () => ({
     },
 });
 
-const ButtonContainer = ({message, classes}) => (
+const ButtonContainer = ({message, classes, url}) => (
     <div className={classes.buttonWrapper}>
         <Button
             variant="contained"
-            href="/tasklist"
+            href={url}
             color="primary"
             disableRipple
             className={classes.button}
@@ -47,7 +47,7 @@ const ButtonContainer = ({message, classes}) => (
             {message}
         </Button>
     </div>
-)
+);
 
 class Recommendation extends React.Component {
     onSubmit = (e) => console.log(e);
@@ -61,21 +61,21 @@ class Recommendation extends React.Component {
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={GroupIcon} message={"My Household"} />
                         </div>
-                        <ButtonContainer message='Recommended Resources' classes={classes}/>
+                        <ButtonContainer message='Recommended Resources' classes={classes} url="/resources"/>
                         <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>See a list of resources that others like you have found helpful.</Typography>
                     </div>
                     <div style={{display: 'flex', flexDirection: 'column', margin: '20px'}}>
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={LocationIcon} message={"My Locations"} />
                         </div>
-                        <ButtonContainer message='Community Involvement' classes={classes}/>
+                        <ButtonContainer message='Community Involvement' classes={classes} url="/community"/>
                         <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>Connect with people in your area who share your cultural origins.</Typography>
                     </div>
                     <div style={{display: 'flex', flexDirection: 'column', margin: '20px'}}>
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={TodayIcon} message={"My Progress"} />
                         </div>
-                        <ButtonContainer message='Task List' classes={classes} />
+                        <ButtonContainer message='Task List' classes={classes} url="/tasklist"/>
                         <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>Track your progress, and more. WelcomeU is free, and always will be!</Typography>
                     </div>
                 </Paper>
