@@ -5,10 +5,11 @@ import WelcomePage from '../components/welcomePage';
 import FormPage from '../components/formPage';
 import { Redirect } from 'react-router-dom';
 import Recommendation from '../components/recommendation'
+import DetailsPage from '../components/detailsPage'
 
 class RoutesWrapper extends Component {
   componentDidMount() {
-    // fetch data
+
   }
 
   render() {
@@ -19,6 +20,7 @@ class RoutesWrapper extends Component {
         <Route exact path="/" component={WelcomePage} />
         <Route path="/join" component={FormPage} />
         <Route path="/recommendation" component={Recommendation} />
+        <Route path="/details" component={DetailsPage} />
         <Redirect to="/" />
       </Switch>
     );
