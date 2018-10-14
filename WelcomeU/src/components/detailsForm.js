@@ -3,6 +3,10 @@ import { withStyles } from '@material-ui/core/styles';
 import IconButton from '@material-ui/core/IconButton';
 import { Typography, TextField } from '@material-ui/core';
 import OutlinedInput from '@material-ui/core/OutlinedInput';
+import FormLabel from '@material-ui/core/FormLabel';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import RadioGroup from '@material-ui/core/RadioGroup'
+import Radio from '@material-ui/core/Radio';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
@@ -29,7 +33,8 @@ const styles = theme => ({
 class SimpleSelect extends React.Component {
   state = {
     genderChecked: null,
-    country: ''
+    country: '',
+    children: null
   };
 
   handleChange = event => {
@@ -90,7 +95,7 @@ class SimpleSelect extends React.Component {
           </div>
           <div style={{margin: '20px'}}>
             <div>
-              <Typography style={{textAlign: 'center'}} variant="headline">My Country Origin is:</Typography>
+              <Typography style={{textAlign: 'center'}} variant="headline">My Country of Origin is:</Typography>
               <div className={classes.box}>
               <FormControl variant="outlined">
                   <Select
@@ -107,6 +112,26 @@ class SimpleSelect extends React.Component {
                   >
                   {COUNTRIES.map(C => <MenuItem value={C}>{C}</MenuItem>)}
                   </Select>
+              </FormControl>
+              </div>
+            </div>
+          </div>
+          <div style={{margin: '20px'}}>
+            <div>
+              <div className={classes.box}>
+              <FormControl component="fieldset" className={classes.formControl}>
+              <Typography style={{textAlign: 'center'}} variant="headline">Do you have Children?</Typography>
+                <RadioGroup
+                  aria-label="Gender"
+                  name="children"
+                  style={{marginLeft: '20px', marginTop: '15px'}}
+                  value={this.state.children}
+                  onChange={this.handleChange}
+                  color="primary"
+                >
+                  <FormControlLabel value="female" control={<Radio color="primary" />} label="Yes" />
+                  <FormControlLabel value="male" control={<Radio color="primary" />} label="No" />
+                </RadioGroup>
               </FormControl>
               </div>
             </div>
