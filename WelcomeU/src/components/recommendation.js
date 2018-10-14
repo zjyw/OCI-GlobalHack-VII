@@ -35,11 +35,11 @@ const styles = () => ({
     },
 });
 
-const ButtonContainer = ({message, classes, url}) => (
+const ButtonContainer = ({message, classes, url, history}) => (
     <div className={classes.buttonWrapper}>
         <Button
             variant="contained"
-            href={url}
+            onClick={() => history.push(url)}
             color="primary"
             disableRipple
             className={classes.button}
@@ -52,7 +52,7 @@ const ButtonContainer = ({message, classes, url}) => (
 class Recommendation extends React.Component {
     onSubmit = (e) => console.log(e);
     render() {
-        const {classes } = this.props;
+        const {classes, history} = this.props;
         return (
             <div>
                 <AppBar />
@@ -61,21 +61,21 @@ class Recommendation extends React.Component {
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={GroupIcon} message={"My Household"} />
                         </div>
-                        <ButtonContainer message='Recommended Resources' classes={classes} url="/resources"/>
+                        <ButtonContainer message='Recommended Resources' classes={classes} url="/resources" history={history}/>
                         <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>See a list of resources that others like you have found helpful.</Typography>
                     </div>
                     <div style={{display: 'flex', flexDirection: 'column', margin: '20px'}}>
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={LocationIcon} message={"My Locations"} />
                         </div>
-                        <ButtonContainer message='Community Involvement' classes={classes} url="/community"/>
+                        <ButtonContainer message='Community Involvement' classes={classes} url="/community" history={history}/>
                         <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>Connect with people in your area who share your cultural origins.</Typography>
                     </div>
                     <div style={{display: 'flex', flexDirection: 'column', margin: '20px'}}>
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={TodayIcon} message={"My Progress"} />
                         </div>
-                        <ButtonContainer message='Task List' classes={classes} url="/tasklist"/>
+                        <ButtonContainer message='Task List' classes={classes} url="/tasklist" history={history}/>
                         <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>Track your progress, and more. WelcomeU is free, and always will be!</Typography>
                     </div>
                 </Paper>
