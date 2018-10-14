@@ -39,7 +39,7 @@ const ButtonContainer = ({message, classes}) => (
     <div className={classes.buttonWrapper}>
         <Button
             variant="contained"
-            href=""
+            href="/tasklist"
             color="primary"
             disableRipple
             className={classes.button}
@@ -75,7 +75,7 @@ class Recommendation extends React.Component {
                         <div style={{width: '60%', margin: 'auto'}}>
                             <Subtitle Icon={TodayIcon} message={"My Progress"} />
                         </div>
-                        <ButtonContainer message='Task List' classes={classes}/>
+                        <ButtonContainer message='Task List' classes={classes} />
                         <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>Track your progress, and more. WelcomeU is free, and always will be!</Typography>
                     </div>
                 </Paper>
