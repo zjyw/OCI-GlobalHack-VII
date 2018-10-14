@@ -1,0 +1,1 @@
+export default [{message: 'WelcomeU', lang: 'english'}, {message: '欢迎您', lang: 'chinese'}, {message: "Bienvenido", lang: 'spanish'}, {message: "مرحبا بك", lang: 'spanish'}];
