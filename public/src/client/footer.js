@@ -19,7 +19,6 @@ define('forum/footer', ['notifications', 'chat', 'components', 'translator'], fu
 
 		transDiv.appendChild(newDiv)
 		content.insertBefore(transDiv, content.firstChild);
-		// content.parentNode.prepend(newDiv, content);
 	}
 
 	function googleTranslateElementInit() {
@@ -107,4 +106,5 @@ define('forum/footer', ['notifications', 'chat', 'components', 'translator'], fu
 	initUnreadTopics();
 	addGoogleElement();
 	googleTranslateElementInit();
+
 });
