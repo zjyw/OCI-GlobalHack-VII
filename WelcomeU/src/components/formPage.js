@@ -8,6 +8,7 @@ import AssignmentIcon from '@material-ui/icons/Assignment'
 import Form from './form';
 import AppBar from '../components/appBar';
 import { Typography } from '@material-ui/core';
+import {withRouter} from 'react-router-dom';
 
 
 const Subtitle = ({message, Icon}) => (<div style={{margin: '35px 0', display: 'flex'}}>
@@ -27,7 +28,7 @@ const styles = () => ({
 class FormPage extends React.Component {
   onSubmit = (e) => console.log(e);
   render() {
-    const {classes } = this.props;
+    const {classes, history } = this.props;
     return (
       <div>
       <AppBar />
@@ -43,7 +44,9 @@ class FormPage extends React.Component {
           <Form onSubmit={this.onSubmit} />
           <Typography variant="subheading" style={{textAlign: 'center'}}>No, thanks.</Typography>
           <Typography variant="subheading" style={{textAlign: 'center'}}>I'm just browsing</Typography>
-          <Button variant="contained" style={{marginLeft: '60px', marginTop: '10px'}}>Continue</Button>
+          <Button onClick={() => {
+        history.push('/details');
+        }} variant="contained" style={{marginLeft: '60px', marginTop: '10px'}}>Continue</Button>
         </div>
       </Paper>
     </div>
@@ -51,4 +54,4 @@ class FormPage extends React.Component {
   }
 }
 
-export default withStyles(styles)(FormPage);
+export default withStyles(styles)(withRouter(FormPage));
