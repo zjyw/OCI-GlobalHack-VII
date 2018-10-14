@@ -59,7 +59,7 @@ class Recommendation extends React.Component {
                 <Paper className={classes.root} elevation={1}>
                     <div style={{display: 'flex', flexDirection: 'column', margin: '20px'}}>
                         <div style={{width: '60%', margin: 'auto'}}>
-                            <Subtitle Icon={GroupIcon} message={"My Locations"} />
+                            <Subtitle Icon={GroupIcon} message={"My Household"} />
                         </div>
                         <ButtonContainer message='Recommended Resources' classes={classes}/>
                         <Typography variant="body1" style={{textAlign: 'center', 'margin-right': '120px'}}>See a list of resources that others like you have found helpful.</Typography>
