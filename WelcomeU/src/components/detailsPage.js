@@ -20,14 +20,13 @@ const styles = () => ({
 });
 
 class FormPage extends React.Component {
-  onSubmit = (e) => console.log(e);
   render() {
     const {classes, history } = this.props;
     return (
       <div>
       <AppBar />
       <Paper className={classes.root} elevation={1}>
-        <div style={{marginRight: '100px'}}>
+        <div style={{margin: 'auto', width: '90%'}}>
           <Dialog />
           <Typography variant="h4">Tell Us About Yourself</Typography>
           <Typography variant="h6">We will use this information to make recommendations. We do not share this information with anyone.</Typography>

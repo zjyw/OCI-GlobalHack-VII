@@ -38,6 +38,7 @@ const ButtonContainer = ({message, classes, url}) => (
             variant="contained"
             href={url}
             color="primary"
+            style={{color: 'white', fontSize: '15px'}}
             disableRipple
             className={classes.button}
         >

@@ -17,10 +17,6 @@ const styles = theme => ({
     display: 'flex',
     marginTop: '40px'
   },
-  formControl: {
-    margin: theme.spacing.unit,
-    minWidth: 120,
-  },
   selectEmpty: {
     marginTop: theme.spacing.unit * 2,
   },
@@ -48,9 +44,9 @@ class SimpleSelect extends React.Component {
 
     return (
       <div className={classes.root}>
-          <div style={{display: 'flex'}}>
+          <div style={{display: 'flex', alignItems: 'center'}}>
             <div style={{margin: '20px'}}>
-              <Typography style={{textAlign: 'center'}}variant="headline">My Gender is:</Typography>
+              <Typography style={{textAlign: 'center'}} variant="headline">My Gender is:</Typography>
               <div className={classes.box}>
                 <IconButton onClick={() => this.setState({genderChecked: 'male'})}>
                   <FA name='male'  style={{fontSize: '90px', color: genderChecked === 'male' ? 'orange': 'gray'}}/>
@@ -66,7 +62,8 @@ class SimpleSelect extends React.Component {
               <div className={classes.box}>
                 <TextField
                   style={{marginTop: '40px'}}
-                  inputProps={{style: {fontSize: '30px', width: '100px', textAlign: 'center'}}}
+                  type="number"
+                  inputProps={{style: {fontSize: '25px', width: '100px', textAlign: 'center'}}}
                   id="outlined-bare"
                   className={classes.textField}
                   defaultValue=""
@@ -82,7 +79,8 @@ class SimpleSelect extends React.Component {
               <div className={classes.box}>
                 <TextField
                   style={{marginTop: '40px'}}
-                  inputProps={{style: {fontSize: '30px', width: '100px', textAlign: 'center'}}}
+                  type="number"
+                  inputProps={{style: {fontSize: '25px', width: '100px', textAlign: 'center'}}}
                   id="outlined-bare"
                   className={classes.textField}
                   defaultValue=""
@@ -98,7 +96,7 @@ class SimpleSelect extends React.Component {
               <div className={classes.box}>
               <FormControl variant="outlined">
                   <Select
-                    style={{marginTop: '40px', fontSize: '20px', width: '150px', height: '73px'}}
+                    style={{marginTop: '40px', fontSize: '20px', width: '150px', height: '68px'}}
                     name="country"
                     value={this.state.country}
                     onChange={this.handleChange}
@@ -128,8 +126,8 @@ class SimpleSelect extends React.Component {
                   onChange={this.handleChange}
                   color="primary"
                 >
-                  <FormControlLabel value="female" control={<Radio color="primary" />} label="Yes" />
-                  <FormControlLabel value="male" control={<Radio color="primary" />} label="No" />
+                  <FormControlLabel value="female" control={<Radio color="secondary" />} label="Yes" />
+                  <FormControlLabel value="male" control={<Radio color="secondary" />} label="No" />
                 </RadioGroup>
               </FormControl>
               </div>

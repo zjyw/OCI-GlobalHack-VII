@@ -35,3 +35,7 @@
   margin-top: 20px;
   margin-right: 20px
 }
+
+.chatbot {
+  border: 2px solid lightgray;
+}

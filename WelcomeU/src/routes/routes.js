@@ -18,8 +18,7 @@ class RoutesWrapper extends Component {
   render() {
     return (
       <Switch>
-        <Route exact path="/" component={WelcomePage} />
-        <Route path="/join" component={FormPage} />
+        <Route exact path="/" component={FormPage} />
         <Route path="/recommendation" component={Recommendation} />
         <Route path="/tasklist" component={TaskList} />
         <Route path="/resources" component={ResourceList} />
