@@ -7,6 +7,7 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Checkbox from '@material-ui/core/Checkbox';
+import {EmploymentTasks, ChildcareTasks, CitizenshipTasks, FinancialPlanningTasks, HealthcareTasks} from '../constants/tasks';
 
 const styles = theme => ({
     root: {
@@ -16,6 +17,13 @@ const styles = theme => ({
         margin: theme.spacing.unit * 3,
     },
 });
+
+const CheckListItem = props => <FormControlLabel
+    control={
+        <Checkbox />
+    }
+    label={props.label}
+/>;
 
 class TaskList extends React.Component {
     state = {
@@ -36,60 +44,34 @@ class TaskList extends React.Component {
         return (
             <div className={classes.root}>
                 <FormControl component="fieldset" className={classes.formControl}>
-                    <FormLabel component="legend">Assign responsibility</FormLabel>
+                    <FormLabel component="legend">Employment</FormLabel>
                     <FormGroup>
-                        <FormControlLabel
-                            control={
-                                <Checkbox checked={gilad} onChange={this.handleChange('gilad')} value="gilad" />
-                            }
-                            label="Gilad Gray"
-                        />
-                        <FormControlLabel
-                            control={
-                                <Checkbox checked={jason} onChange={this.handleChange('jason')} value="jason" />
-                            }
-                            label="Jason Killian"
-                        />
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    checked={antoine}
-                                    onChange={this.handleChange('antoine')}
-                                    value="antoine"
-                                />
-                            }
-                            label="Antoine Llorca"
-                        />
+                        {EmploymentTasks.map(t => <CheckListItem label={t} />)}
                     </FormGroup>
-                    <FormHelperText>Be careful</FormHelperText>
                 </FormControl>
-                <FormControl required error={error} component="fieldset" className={classes.formControl}>
-                    <FormLabel component="legend">Pick two</FormLabel>
+                <FormControl component="fieldset" className={classes.formControl}>
+                    <FormLabel component="legend">Childcare</FormLabel>
                     <FormGroup>
-                        <FormControlLabel
-                            control={
-                                <Checkbox checked={gilad} onChange={this.handleChange('gilad')} value="gilad" />
-                            }
-                            label="Gilad Gray"
-                        />
-                        <FormControlLabel
-                            control={
-                                <Checkbox checked={jason} onChange={this.handleChange('jason')} value="jason" />
-                            }
-                            label="Jason Killian"
-                        />
-                        <FormControlLabel
-                            control={
-                                <Checkbox
-                                    checked={antoine}
-                                    onChange={this.handleChange('antoine')}
-                                    value="antoine"
-                                />
-                            }
-                            label="Antoine Llorca"
-                        />
+                        {ChildcareTasks.map(t => <CheckListItem label={t} />)}
                     </FormGroup>
-                    <FormHelperText>You can display an error</FormHelperText>
+                </FormControl>
+                <FormControl component="fieldset" className={classes.formControl}>
+                    <FormLabel component="legend">Healthcare</FormLabel>
+                    <FormGroup>
+                        {HealthcareTasks.map(t => <CheckListItem label={t} />)}
+                    </FormGroup>
+                </FormControl>
+                <FormControl component="fieldset" className={classes.formControl}>
+                    <FormLabel component="legend">Financial Planning</FormLabel>
+                    <FormGroup>
+                        {FinancialPlanningTasks.map(t => <CheckListItem label={t} />)}
+                    </FormGroup>
+                </FormControl>
+                <FormControl component="fieldset" className={classes.formControl}>
+                    <FormLabel component="legend">Path To Citizenship</FormLabel>
+                    <FormGroup>
+                        {CitizenshipTasks.map(t => <CheckListItem label={t} />)}
+                    </FormGroup>
                 </FormControl>
             </div>
         );
