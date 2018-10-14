@@ -8,6 +8,7 @@ import Dialog from './dialog';
 import DetailForm from './detailsForm';
 import Button from '@material-ui/core/Button';
 import Chatbot from './chatBot';
+import {withRouter} from 'react-router-dom';
 
 const styles = () => ({
   root: {
@@ -21,7 +22,7 @@ const styles = () => ({
 class FormPage extends React.Component {
   onSubmit = (e) => console.log(e);
   render() {
-    const {classes } = this.props;
+    const {classes, history } = this.props;
     return (
       <div>
       <AppBar />
@@ -35,7 +36,7 @@ class FormPage extends React.Component {
             <DetailForm />
           </div>
           <div style={{display: 'flex', flexDirection: 'row-reverse'}}>
-            <Button variant="contained" color="primary" style={{color: 'white', fontSize: '18px', marginLeft: '20px'}}>Next</Button>
+            <Button variant="contained" color="primary" onClick={() => history.push('/recommendation')} style={{color: 'white', fontSize: '18px', marginLeft: '20px'}}>Next</Button>
           </div>
         </div>
       </Paper>
@@ -45,4 +46,4 @@ class FormPage extends React.Component {
   }
 }
 
-export default withStyles(styles)(FormPage);
+export default withStyles(styles)(withRouter(FormPage));
